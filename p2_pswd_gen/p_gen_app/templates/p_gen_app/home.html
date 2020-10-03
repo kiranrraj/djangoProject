@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <form action={% url 'result' %}>
+        <h4>Customize Your Password</h4>
+        <label for="len">Length</label>
+        <select id="len" name="length">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8" selected>8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+        <p>Do you want to make password more complex by including the following options</p>
+        <div class="selection">
+            <label for="b_char_up">Uppercase</label>
+            <input type="checkbox" name="upper" id="b_char_up">
+            <br>
+            <label for="b_num">Numbers</label>
+            <input type="checkbox" name="number" id="b_num">
+            <br>
+            <label for="b_spl">Special Characters</label>
+            <input type="checkbox" name="special" id="b_spl">
+        </div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
