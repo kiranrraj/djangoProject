@@ -40,4 +40,4 @@ class HelloApiView(APIView):
 
     def delete(self, request, pk=None):
         """Deleting an object"""
-        return Response({'method': 'DELETE'})
+        return Response({'method': 'DELETE'}) 
