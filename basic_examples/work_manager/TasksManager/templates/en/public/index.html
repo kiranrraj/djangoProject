@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title_html %} Home Page {% endblock %}
+{% block h1_text %} Welcome to home Page {% endblock %}
+{% block content%}
+    <h3>{{name|upper}}</h3>
+    <h4>{{city}}</h4>
+    <h4>{{nationality}}</h4>
+    <ul>
+        {% for lang in pLang %}
+            <li>{{lang}}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <a href="{% url 'about' %}">About us</a>
+
+{% endblock %}
