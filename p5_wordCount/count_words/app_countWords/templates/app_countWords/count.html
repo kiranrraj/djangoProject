@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Page</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, green, yellow);
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgba(1, 1, 1, 0.3);
+            padding: 20px;
+        }
+
+        span {
+            color: black;
+        }
+
+        h3 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% if flag %}
+        <div class="items">
+            <h3>What you entered : <span>{{usertext}}</span>
+            </h3>
+            <h3>The number of character in your string is: <span>{{ length }}</span>
+            </h3>
+            <h3>The number of words in your string is: <span>{{ num }}</span>
+            </h3>
+        </div>
+        {% else %}
+        <h3>Nothing entered!!!!</h3>
+        {% endif %}
+        <a href="{% url 'home' %}">Home Page</a>
+    </div>
+
+</body>
+
+</html>

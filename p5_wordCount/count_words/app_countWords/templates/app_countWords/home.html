@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, green, yellow);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        button {
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>You are in home page</h1>
+        <form action="{% url 'count' %}">
+            <label for="usertext">Enter a string to count</label>
+            <textarea name="usertext" id="usertext" cols="30" rows="10"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
